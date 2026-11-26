@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 23 | Mi clima</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="contenedor">
+
+        <header>
+            <p class="etiqueta">PROYECTO 23 · APP DEL CLIMA</p>
+            <h1>☁️ Mi clima</h1>
+            <p>Consulta el tiempo en cualquier ciudad del mundo.</p>
+        </header>
+
+        <form id="formulario" class="buscador">
+
+            <label for="ciudad">Ciudad o ubicación</label>
+
+            <div class="fila">
+                <input
+                    type="text"
+                    id="ciudad"
+                    placeholder="Ej. Bogotá, Colombia"
+                    required
+                >
+
+                <button type="submit">Buscar</button>
+            </div>
+
+        </form>
+
+        <div class="acciones">
+            <button id="ubicacion" type="button">
+                📍 Mi ubicación
+            </button>
+
+            <button id="actualizar" type="button">
+                ↻ Actualizar
+            </button>
+        </div>
+
+        <p id="mensaje" role="status" aria-live="polite">
+            Escribe una ciudad para comenzar.
+        </p>
+
+        <section id="resultado" hidden>
+
+            <article class="principal">
+
+                <div>
+                    <p id="lugar"></p>
+                    <h2 id="temperatura"></h2>
+                    <p id="condicion"></p>
+                </div>
+
+                <span id="icono" aria-hidden="true">🌤️</span>
+
+            </article>
+
+            <section class="detalles">
+
+                <article>
+                    <span>💨 Viento</span>
+                    <strong id="viento"></strong>
+                </article>
+
+                <article>
+                    <span>🌧️ Probabilidad de lluvia</span>
+                    <strong id="lluvia"></strong>
+                </article>
+
+                <article>
+                    <span>💧 Humedad</span>
+                    <strong id="humedad"></strong>
+                </article>
+
+                <article>
+                    <span>🌡️ Sensación térmica</span>
+                    <strong id="sensacion"></strong>
+                </article>
+
+            </section>
+
+            <h3>🕒 Últimas 24 horas</h3>
+            <div id="pasado" class="horas"></div>
+
+            <h3>🔮 Próximas 24 horas</h3>
+            <div id="futuro" class="horas"></div>
+
+        </section>
+
+        <footer>
+            Datos meteorológicos de Visual Crossing Weather API
+        </footer>
+
+    </main>
+
+</body>
+</html>

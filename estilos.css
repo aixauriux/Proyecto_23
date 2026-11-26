@@ -1,0 +1,221 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f7f0ff, #e8e2ff);
+    color: #403454;
+    min-height: 100vh;
+}
+
+.contenedor {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 12px 35px #755a9b25;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 42px;
+    margin: 10px 0;
+    color: #8059b7;
+}
+
+.etiqueta {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #9373bb;
+}
+
+header p {
+    color: #746782;
+}
+
+.buscador {
+    margin-top: 30px;
+}
+
+.buscador label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+.fila {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 2px solid #e4d7f7;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    background: #9b77d1;
+    color: white;
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #7e57b7;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.acciones {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.acciones button {
+    background: #eee5fa;
+    color: #704b9d;
+}
+
+.acciones button:hover {
+    background: #decaf5;
+}
+
+#mensaje {
+    min-height: 25px;
+    color: #765b91;
+}
+
+.principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(120deg, #a88adf, #8060c4);
+    color: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 15px;
+}
+
+.principal h2 {
+    font-size: 58px;
+    margin: 12px 0;
+}
+
+.principal #icono {
+    font-size: 70px;
+}
+
+.detalles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.detalles article {
+    background: #f6f0ff;
+    padding: 18px;
+    border-radius: 14px;
+    display: grid;
+    gap: 12px;
+}
+
+.detalles span {
+    font-size: 13px;
+    color: #7b6790;
+}
+
+.detalles strong {
+    font-size: 20px;
+}
+
+.horas {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 4px 0 18px;
+}
+
+.hora {
+    flex: 0 0 105px;
+    text-align: center;
+    background: #f6f0ff;
+    padding: 15px 8px;
+    border-radius: 14px;
+}
+
+.hora p {
+    margin: 9px 0;
+}
+
+.hora .simbolo {
+    font-size: 27px;
+}
+
+.hora small {
+    display: block;
+    color: #78688a;
+}
+
+h3 {
+    margin-top: 30px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 28px;
+    font-size: 12px;
+    color: #9484a5;
+}
+
+@media (max-width: 600px) {
+
+    .contenedor {
+        margin: 12px;
+        padding: 18px;
+    }
+
+    .fila {
+        flex-direction: column;
+    }
+
+    .detalles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .principal {
+        padding: 20px;
+    }
+
+    .principal h2 {
+        font-size: 42px;
+    }
+
+    .principal #icono {
+        font-size: 46px;
+    }
+
+    .acciones button {
+        flex: 1;
+        padding: 12px 5px;
+    }
+}
